@@ -1,0 +1,73 @@
+/* The Robot Gif link */
+/* https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #45badd;
+}
+
+/* Applying Styling to the Joke COntainer */
+.joke__container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: url("./gif/robot.gif") no-repeat;
+    background-position: left center;
+    background-size: contain;
+} 
+
+.joke__text {
+    display: none;
+    text-align: center;
+    position: relative;
+    top: -15px;
+}
+
+/* Styling Joke Button */
+.joke__btn, .joke__text {
+    font: 15px 'Courier New', Courier, monospace;
+    font-weight: 800;
+    color: #fff;
+    background-color: #FF3482;
+    width: 200px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(95%);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    cursor: default;
+    filter: brightness(30%);
+}
+
+/* Adding Media Queries for Tablets or Smaller Devices */
+@media screen and (max-width: 1000px) {
+    .joke__container {
+        background-position: center center;
+        background-size: cover;
+    }
+
+    button {
+        box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+
+    }
+}
